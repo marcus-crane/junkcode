@@ -1,0 +1,12 @@
+extends layout.pug
+
+block title
+    title Braintree 
+
+block content
+    form#checkout(method="POST" action="/braintree/checkout")
+        div#payment-form
+        input(type="submit" value="Please pay $10")
+    
+    script(src="https://js.braintreegateway.com/js/braintree-2.30.0.min.js")
+    script var clientToken="#{clientToken}"; braintree.setup(clientToken, "dropin", { container: "payment-form" });

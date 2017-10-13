@@ -1,0 +1,12 @@
+extends layout.pug
+
+block title
+    title Success!
+
+block content
+    h1 Payment completed!
+    p Transaction ID #{transaction_id} has been sent off for processing.
+    p The user has been charged for #{amount} #{currency}
+    p Last 4 digits are #{lastFour}    
+        img(src=card_logo width="40px")
+    p Their card expires on #{expiration}

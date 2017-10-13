@@ -1,0 +1,31 @@
+{
+  "name": "republish",
+  "version": "0.1.2",
+  "description": "A self-republishing module",
+  "main": "app.js",
+  "scripts": {
+    "start": "commands.js"
+  },
+  "bin": {
+    "republish": "commands.js"
+  },
+  "keywords": [
+    "fun",
+    "joke",
+    "dumb"
+  ],
+  "author": "Marcus <marcus@thingsima.de> (http://thingsima.de)",
+  "license": "MIT",
+  "dependencies": {
+    "suppose": "^0.6.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcus-crane/republish.git"
+  },
+  "bugs": {
+    "url": "https://github.com/marcus-crane/republish/issues"
+  },
+  "homepage": "https://github.com/marcus-crane/republish#readme"
+}

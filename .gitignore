@@ -1,1 +1,10 @@
+# general
 .DS_Store
+
+# node
+node_modules
+
+# python
+bin
+include
+lib

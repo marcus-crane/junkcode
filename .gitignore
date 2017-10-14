@@ -1,6 +1,10 @@
 # general
 .DS_Store
 
+# data
+config.ini
+*.csv
+
 # node
 node_modules
 

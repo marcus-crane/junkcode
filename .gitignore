@@ -5,6 +5,8 @@
 node_modules
 
 # python
-*/bin
-*/include
+bin
+include
 lib
+pip-selfcheck.json
+.Python

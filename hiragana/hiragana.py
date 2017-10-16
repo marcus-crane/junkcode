@@ -17,6 +17,6 @@ for key in agroup:
     print('Correct!')
   else:
     results['n'] += 1
-    print('Sorry, that was actually the letter {0}'.format(key))
+    print('Sorry, that was actually the letter {}'.format(key))
 
-print('You got {0}/{1} correct!'.format(results['y'], len(agroup)))
+print('You got {}/{} correct!'.format(results['y'], len(agroup)))

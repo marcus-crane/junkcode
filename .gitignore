@@ -4,6 +4,7 @@
 # data
 config.ini
 *.csv
+*.sqlite3
 
 # node
 node_modules

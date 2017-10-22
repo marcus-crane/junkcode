@@ -1,0 +1,9 @@
+{% if wine_list %}
+  <ul>
+  {% for wine in wine_list %}
+    <li><a href="{% url 'reviews:detail' wine.id %}">{{ wine.name }}</a></li>
+  {% endfor %}
+  </ul>
+{% else %}
+  <p>No wine in the database.</p>
+{% endif %}

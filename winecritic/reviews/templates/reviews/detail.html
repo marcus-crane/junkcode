@@ -1,0 +1,12 @@
+<h1>{{ wine.name }}</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'reviews:vote' wine.id %}" method="POST">
+{% csrf_token %}
+{% for vintage in wine.vintage_set.all %}
+  <input type="radio" name="vintage" id="vintage{{ forloop.counter }}" value="{{ vintage.id }}" />
+  <label for="vintage{{ forloop.counter }}">{{ vintage.year }}</label><br />
+{% endfor %}
+<input type="submit" value="Vote" />
+</form>

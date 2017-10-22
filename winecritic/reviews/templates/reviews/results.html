@@ -1,0 +1,9 @@
+<h1>{{ wine.name }}</h1>
+
+<ul>
+{% for vintage in wine.vintage_set.all %}
+  <li>{{ vintage.year }} -- {{ vintage.votes }} vote{{ vintage.votes|pluralize }}</li>
+{% endfor %}
+</ul>
+
+<a href="{% url 'reviews:detail' wine.id %}">Vote again?</a>

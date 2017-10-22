@@ -5,6 +5,14 @@ class Wine(models.Model):
   def __str__(self):
     return self.name
 
+  def is_cheap(self):
+    price = self.price
+    if price < 15:
+      return True
+    else:
+      return False
+  is_cheap.short_description = 'Under $15?'
+
   # I'm going to leave out a lot of types for the sake of readability
   TYPES = (
     ('CH', 'Chardonnay'),
@@ -23,7 +31,7 @@ class Wine(models.Model):
 class Vintage(models.Model):
   '''Define a vintage, of which there is usually one per year'''
   def __str__(self):
-    return self.year
+    return str(self.year)
 
   wine = models.ForeignKey(Wine, on_delete=models.CASCADE)
   year = models.DateField('year produced')

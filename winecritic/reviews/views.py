@@ -1,21 +1,24 @@
 from django.shortcuts import get_object_or_404, render
-from django.http import HttpResponseRedirect, HttpResponse
+from django.http import HttpResponseRedirect
 from django.urls import reverse
+from django.views import generic
 
-from .models import Wine
+from .models import Wine, Vintage
 
-def index(request):
-  wine_list = Wine.objects.order_by('name')[:5]
-  context = {'wine_list': wine_list}
-  return render(request, 'reviews/index.html', context)
+class IndexView(generic.ListView):
+  template_name = 'reviews/index.html'
+  context_object_name = 'wine_list'
 
-def detail(request, wine_id):
-  wine = get_object_or_404(Wine, pk=wine_id)
-  return render(request, 'reviews/detail.html', {'wine':wine})
+  def get_queryset(self):
+    return Wine.objects.all()
 
-def results(request, wine_id):
-  wine = get_object_or_404(Wine, pk=wine_id)
-  return render(request, 'reviews/results.html', {'wine': wine})
+class DetailView(generic.DetailView):
+  model = Wine
+  template_name = 'reviews/detail.html'
+
+class ResultsView(generic.DetailView):
+  model = Wine
+  template_name = 'reviews/results.html'
 
 def vote(request, wine_id):
   wine = get_object_or_404(Wine, pk=wine_id)

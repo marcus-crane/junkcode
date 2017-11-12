@@ -1,7 +1,9 @@
 # general
 .DS_Store
-*.jpg
-*.md
+
+# project specific
+tumblr-exporter/backup/*.jpg
+tumblr-exporter/backup/*.md
 
 # data
 config.ini

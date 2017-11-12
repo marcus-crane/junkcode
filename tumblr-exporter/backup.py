@@ -62,15 +62,15 @@ def save_text(post):
         file.write(content)
     print('    ✔ Saved text')
 
-def fetch_posts(offset = 0):
-    cfg = load_config()
+def fetch_posts(cfg, offset = 0):
     data = fetch_data(cfg['domain'], cfg['key'], offset)
     posts = data['response']['blog']['posts']
     for post in data['response']['posts']:
         backup_post(post)
 
     if offset < posts:
-        fetch_posts(offset + 20)
+        fetch_posts(cfg, offset + 20)
 
 if __name__ == "__main__":
-    fetch_posts()
+    cfg = load_config()
+    fetch_posts(cfg)

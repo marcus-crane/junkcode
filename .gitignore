@@ -1,5 +1,7 @@
 # general
 .DS_Store
+*.jpg
+*.md
 
 # data
 config.ini

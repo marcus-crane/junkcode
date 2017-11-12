@@ -37,25 +37,30 @@ def backup_post(post):
     print('\n{}'  .format(post['slug']))
     md = html2text(post['caption'])
     save_text(post)
-    save_image(post['photos'][0]['original_size']['url'])
+    save_image(post['photos'][0]['original_size']['url'], post['slug'])
     
 
-def save_image(url):
+def save_image(url, slug):
     try:
-        pass
-        #r = requests.get(url)
-        #print('    ✔ Saved image')
+        r = requests.get(url)
+        image = r.content
+        filename = 'backup/{}.jpg'.format(slug)
+        with open(filename, 'wb') as file:
+            file.write(image)
+        print('    ✔ Saved image')
     except Exception as error:
         raise ValueError('Failed to save image. Is it a valid URL?', error)
 
 def save_text(post):
+    filename = 'backup/{}.md'.format(post['slug'])
     content = html2text(post['caption'])
     content = ('---\n'
             + 'First published {}\n'.format(post['date'])
             + 'Tags: {}\n'.format(', '.join(post['tags']))
             + '---\n\n' + content)
-    print(content)
-    #print('    ✔ Saved text')
+    with open(filename, 'w') as file:
+        file.write(content)
+    print('    ✔ Saved text')
 
 def fetch_posts(offset = 0):
     cfg = load_config()

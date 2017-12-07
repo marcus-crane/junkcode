@@ -1,0 +1,5 @@
+/Users/marcus/Code/Junk/YellowProgrammingBook/YellowProgrammingBook/obj/x86/Debug/YellowProgrammingBook.csproj.CoreCompileInputs.cache
+/Users/marcus/Code/Junk/YellowProgrammingBook/YellowProgrammingBook/bin/Debug/YellowProgrammingBook.exe
+/Users/marcus/Code/Junk/YellowProgrammingBook/YellowProgrammingBook/bin/Debug/YellowProgrammingBook.pdb
+/Users/marcus/Code/Junk/YellowProgrammingBook/YellowProgrammingBook/obj/x86/Debug/YellowProgrammingBook.exe
+/Users/marcus/Code/Junk/YellowProgrammingBook/YellowProgrammingBook/obj/x86/Debug/YellowProgrammingBook.pdb

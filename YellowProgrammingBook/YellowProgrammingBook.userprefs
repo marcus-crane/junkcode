@@ -1,0 +1,13 @@
+﻿<Properties StartupConfiguration="{E43A1EA6-CAF6-477E-A371-5862689825A7}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="YellowProgrammingBook/Program.cs">
+    <Files>
+      <File FileName="YellowProgrammingBook/Program.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

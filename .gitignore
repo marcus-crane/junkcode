@@ -4,6 +4,7 @@
 # project specific
 tumblr-exporter/backup/*.jpg
 tumblr-exporter/backup/*.md
+yt-faves-spreadsheet/client_secret.json
 
 # data
 config.ini

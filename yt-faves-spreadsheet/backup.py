@@ -23,14 +23,32 @@ def fetch_channel(service, **kwargs):
 	print('Logged in as {}'.format(results['items'][0]['snippet']['title']))
 	return results['items'][0]['contentDetails']['relatedPlaylists']['favorites']
 
+def save_playlist(videos):
+	with open('favourites.csv', 'w', newline='') as favourites:
+		faveswriter = csv.writer(favourites, delimiter=',')
+		faveswriter.writerow(['id', 'title', 'description', 'published_date'])
+		for video in videos:
+			faveswriter.writerow([video['id'], video['title'], video['description'], video['date']])
+	print('Saved {} videos to favourites.csv'.format(len(videos)))
+
+def pull_favourites(service, playlistId):
+	favourites = []
+	pageToken = None
+	results = fetch_playlist(service, playlistId, pageToken)
+	
+	while len(favourites) != results['pageInfo']['totalResults']:
+		videos = fetch_playlist(service, playlistId=playlistId, pageToken=pageToken)
+		for video in videos['items']:
+			favourites.append({ 'id': video['snippet']['resourceId']['videoId'], 'title': video['snippet']['title'], 'description': video['snippet']['description'], 'date': video['snippet']['publishedAt'] })
+
+		if 'nextPageToken' in videos:
+			pageToken = videos['nextPageToken']
+			print('Page Token is now {}'.format(pageToken))
+	save_playlist(favourites)
+
+
 def fetch_playlist(service, playlistId, pageToken):
-	results = service.playlistItems().list(part='snippet', pageToken=pageToken, playlistId=playlistId, maxResults=50).execute()
-	with open('faves.csv', 'w', newline='') as favesfile:
-		faveswriter = csv.writer(favesfile, delimiter=',')
-		faveswriter.writerow(['id', 'title', 'description', 'thumbnail', 'publishedAt'])
-		for video in results['items']:
-			faveswriter.writerow([video['id'], video['snippet']['title'], video['snippet']['description'], video['snippet']['thumbnails']['default']['url'], video['snippet']['publishedAt']])
-	print('Bye bye')
+	return service.playlistItems().list(part='snippet', pageToken=pageToken, playlistId=playlistId, maxResults=50).execute()
 
 if __name__ == '__main__':
     os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
@@ -38,4 +56,4 @@ if __name__ == '__main__':
     playlistId = fetch_channel(service,
             part='id,snippet,contentDetails',
             mine=True)
-    fetch_playlist(service, playlistId=playlistId, pageToken=None)
+    pull_favourites(service, playlistId=playlistId)

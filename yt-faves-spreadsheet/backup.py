@@ -1,3 +1,4 @@
+import csv
 import os
 
 import google.oauth2.credentials
@@ -22,10 +23,19 @@ def fetch_channel(service, **kwargs):
 	print('Logged in as {}'.format(results['items'][0]['snippet']['title']))
 	return results['items'][0]['contentDetails']['relatedPlaylists']['favorites']
 
+def fetch_playlist(service, playlistId, pageToken):
+	results = service.playlistItems().list(part='snippet', pageToken=pageToken, playlistId=playlistId, maxResults=50).execute()
+	with open('faves.csv', 'w', newline='') as favesfile:
+		faveswriter = csv.writer(favesfile, delimiter=',')
+		faveswriter.writerow(['id', 'title', 'description', 'thumbnail', 'publishedAt'])
+		for video in results['items']:
+			faveswriter.writerow([video['id'], video['snippet']['title'], video['snippet']['description'], video['snippet']['thumbnails']['default']['url'], video['snippet']['publishedAt']])
+	print('Bye bye')
+
 if __name__ == '__main__':
     os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
     service = get_authenticated_service()
-    faves_id = fetch_channel(service,
+    playlistId = fetch_channel(service,
             part='id,snippet,contentDetails',
             mine=True)
-    print('Your favorites list is {}'.format(faves_id))
+    fetch_playlist(service, playlistId=playlistId, pageToken=None)

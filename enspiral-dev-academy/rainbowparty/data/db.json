@@ -1,0 +1,10 @@
+{
+ colour: [
+  {id: 1, colour: '#f1c40f'},
+  {id: 2, colour: '#e74c3c'},
+  {id: 3, colour: '#16a085'},
+  {id: 4, colour: '#34495e'},
+  {id: 5, colour: '#bdc3c7'},
+  {id: 6, colour: '#2ecc71'},
+ ]
+}

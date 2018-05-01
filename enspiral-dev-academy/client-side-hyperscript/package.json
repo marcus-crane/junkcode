@@ -1,0 +1,25 @@
+{
+  "name": "client-side-hyperscript",
+  "version": "1.0.0",
+  "description": "A client-side rendering exercise using HyperScript",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify index.js -g uglifyify > bundle.js",
+    "dist": "mkdir -p dist && bash -c 'cp *.{js,html,css} dist'",
+    "push": "gh-pages -d dist",
+    "deploy": "npm run build && npm run dist && npm run push"
+  },
+  "keywords": [],
+  "author": "EDA",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "cheerio": "^0.20.0",
+    "gh-pages": "^0.11.0",
+    "hyperscript": "^1.4.7",
+    "uglifyify": "^3.0.1"
+  },
+  "dependencies": {
+    "superagent": "^2.0.0"
+  }
+}

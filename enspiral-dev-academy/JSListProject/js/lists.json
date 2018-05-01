@@ -1,0 +1,7 @@
+var lists = {
+	"movies": [{
+		"title": "Falling Down"
+	}, {
+		"title": "Ghost in the Shell"
+	}]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "stream-adventure-funtime",
+  "version": "0.0.1",
+  "description": "Learning to use Streams and what not",
+  "main": "program.js",
+  "scripts": {
+    "test": "hi"
+  },
+  "author": "Marcus <marcus@thingsima.de> (http://thingsima.de)",
+  "license": "MIT",
+  "dependencies": {
+    "concat-stream": "^1.5.1",
+    "split": "^1.0.0",
+    "through2": "^2.0.1"
+  }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Problem Solving</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="../styles/main.css" type="text/css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" type="text/css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="../index.html"><i class="fa fa-chevron-left"></i></a>
+        <div id="title">
+            <h1>Problem Solving</h1>
+            <h2>Without it, this page might be full of error48dg8s</h2>
+            <h3>May 8th, 2016</h3>
+        </div>
+    </header>
+    
+    <div id="wrapper">
+        <section>
+            <article>
+                <h1>Have you ever been blocked on a simple problem before and then solved it in an elegant way?</h1>
+                <p>Sure!</p>
+                <h1>What was the problem?</h1>
+                <p>See that back arrow up there at the top of the page? That was a pain to implement, before I had any idea how to go about it.</p>
+                <h1>What techniques did you use to solve it?</h1>
+                <p>I tried looking up ways to make an arrow in CSS which had all these complex variations and implementing an image might not have scaled nicely plus then if you want to alter its colour scheme, you gotta reopen the image file which I couldn't be bothered with</p>
+                <p>I actually realised I could expand an arrow from a CSS library called <a href="https://fortawesome.github.io/Font-Awesome/">Font Awesome</a> which I use for all of my social links down in the footer. I think it worked pretty nicely plus it's easy to restyle with CSS.</p>
+                <h1>How'd it make you feel</h1>
+                <p>I was glad that I found an easily changable solution that doesn't take up more space than it needs to. Some of those CSS3 triangles are nice and techically impressive but they take up way too much space.</p>
+                <h1>What'd you learn from the process?</h1>
+                <p>That sometimes you can use one toolkit that isn't intended for navigation and sneakily make it into a form of navigation anyway. Thinking outside the box I guess?</p>
+                <h1>How confident are you with Pseudocode?</h1>
+                <p>I like to think I understand how to do good pseudocoding in order to better understand what I'm doing but if I sit down and start writing something, my first instinct isn't to pseudocode out what I'm about to make</p>
+                <h1>How about the idea of just trying something?</h1>
+                <p>This is definitely my style. I'll usually save copies of something I work on and strip out all of my work in order to try a different approach</p>
+                <h1>Rubber ducky method?</h1>
+                <p>It might be handy to buy a rubber duck at some point. I usually just read out how the program works in my mind if I get stuck and it's somewhat similar</p>
+                <h1>Reading error messages?</h1>
+                <p>Line references are easily one of the more helpful tools in debugging. It takes practice to not want to freak out at a big error message and actually just sort for identifying information contained within</p>
+                <h1>Console.logging?</h1>
+                <p>I'd say I need to do this more before hand. I do use it a lot but mainly if something isn't working rather than before to make sure it'll work.</p>
+                <h1>Googling?</h1>
+                <p>That's how I learnt most of what I'd self taught myself over the years!</p>
+                <h1>Asking peers for help?</h1>
+                <p>Honestly, not my strongest point! Not because I'm scared of asking but more because I've just always had to be self-dependent a lot and it's basically my default mode. Well, that and I don't always have a concept that is easy to form into a sentence if that makes sense?</p>
+                <h1>Asking coaches for help?</h1>
+                <p>If it's something specific, then I'll usually ask a coach but there's only been one or two times. If it's something I know I can't solve using search, then I might ask but rarely does that happen.</p>
+                <h1>Improving your process with reflection?</h1>
+                <p>Admitting what could have gone better is probably the easy part. Actually implementing changes and building better habits is another story!</p>
+                <h1>Can you tell me what .map() does?</h1>
+                <p>Ooh, interesting. By the looks of it, .map() can be used to convert one array into another. For example, lets say you have the following array:</p>
+                <pre><code>var numbers = [5, 10, 15, 20, 25]</code></pre>
+                <p>If we wanted to multiply the contents by 4, we could do something overly complicated like looking that array then putting it back into another or, we could do this:</p>
+                <pre><code>var fourTimes = numbers.map(function(num)) { 
+                    return num * 4; 
+                }</code></pre>
+                <p>What we're doing is taking the numbers array and running .map on it. Our input for .map is a function which in this case, multiplies each number by 4. Our end result is something a little like this:</p>
+                <pre><code>var fourTimes = [20, 40, 60, 80, 100]</code></pre>
+                <p>The end result is a second array that has taken the original input and multipied the content by 4. Keep in mind that the original numbers array still exists alongside the new one.
+                <h1>.filter()?</h1>
+                <p>The purpose of .filter() is, well, to filter, y'know? Let's say you have the following array</p>
+                <pre><code>var numberArray = [2, 5, 9, 12, 14, 19]</code></pre>
+                <p>If we wanted to filter out any number below 8, we can use .filter() like so</p>
+                <pre><code>function underEight(number) {
+                    return value >= 8;
+                }</code></pre>
+                <p>and then we can run our array through the function and we're done!</p>
+                <pre><code>numberArray.filter(underEight);
+                // numberArray is now [9, 12, 14, 19]</code></pre>
+                <h1>.reduce()?</h1>
+                <p>Reduce, compress, same thing! The easiest version of .reduce() is using it to compress an array of numbers into a single value. So, you've got your array</p>
+                <pre><code>var numbers = [0, 4, 8, 16]</code></pre>
+                <p>But you want the total value of the numbers and looping each number, adding it to a value, is a bit too excessive. Here's where .reduce can come in handy</p>
+                <pre><code>numbers.reduce(function(a, b) {
+                    return a + b;
+                });
+                // total = 28</code></pre>
+            <article>
+        </section>
+    </div>
+    
+    <footer>
+      <p>
+        <a href="mailto:marcus@thingsima.de" target="_blank">
+          <i class="fa fa-envelope"></i>
+        </a>
+        <a href="http://github.com/marcus-crane" target="_blank">
+          <i class="fa fa-github"></i>
+        </a>
+        <a href="http://steamcommunity.com/id/sandtree" target="_blank">
+          <i class="fa fa-steam"></i>
+        </a>
+        <a href="http://twitter.com/ethernetsalad" target="_blank">
+          <i class="fa fa-twitter"></i>
+        </a>
+      </p>
+    </footer>
+
+</body>
+</html>
+

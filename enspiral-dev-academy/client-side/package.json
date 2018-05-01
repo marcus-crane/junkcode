@@ -1,0 +1,30 @@
+{
+  "name": "client-side",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify -t jadeify index.js -g uglifyify > bundle.js",
+    "dist": "mkdir -p dist && bash -c 'cp *.{js,html,css} dist'",
+    "push": "gh-pages -d dist",
+    "deploy": "npm run build && npm run dist && npm run push"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "budo": "^8.1.0",
+    "gh-pages": "^0.11.0",
+    "handlebars": "^4.0.5",
+    "hbsfy": "^2.5.1",
+    "jade": "^1.11.0",
+    "jadeify": "^4.6.0",
+    "pugify": "^1.0.5",
+    "uglifyify": "^3.0.1",
+    "xhr": "^2.2.0"
+  },
+  "dependencies": {
+    "pug": "^2.0.0-beta3"
+  }
+}

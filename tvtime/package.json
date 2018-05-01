@@ -1,0 +1,21 @@
+{
+  "name": "tvtracker",
+  "version": "1.0.0",
+  "description": "A test thing",
+  "main": "app.js",
+  "scripts": {
+    "test": "tape test/*.js | tap-spec"
+  },
+  "author": "Marcus <marcus@thingsima.de>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.15.1",
+    "inquirer": "^1.2.2",
+    "rethinkdbdash": "^2.3.23"
+  },
+  "devDependencies": {
+    "blue-tape": "^1.0.0",
+    "dotenv": "^2.0.0",
+    "tap-spec": "^4.1.1"
+  }
+}

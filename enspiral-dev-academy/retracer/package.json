@@ -1,0 +1,20 @@
+{
+  "name": "retracer",
+  "version": "1.0.0",
+  "description": "Retracing my steps",
+  "main": "index.js",
+  "scripts": {
+    "test": "hi",
+    "start": "node app.js"
+  },
+  "author": "Marcus <marcus@thingsima.de>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "dotenv": "^2.0.0",
+    "express": "^4.14.0",
+    "mongoose": "^4.5.3",
+    "mongoose-simpledb": "^5.1.0",
+    "pug": "^2.0.0-beta3"
+  }
+}

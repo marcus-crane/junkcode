@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML, CSS and the DOM, Part 1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="../styles/main.css" type="text/css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" type="text/css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="../index.html"><i class="fa fa-chevron-left"></i></a>
+        <div id="title">
+            <h1>HTML, CSS and the DOM, Part 1</h1>
+            <h2>Mobbing in the DOM, 50 tags deep</h2>
+            <h3>April 14th, 2016</h3>
+        </div>
+    </header>
+    
+    <div id="wrapper">
+        <section>
+            <article>
+                <h1>Can you think of an analogy to describe HTML, CSS and the DOM? How would you describe it to your non-technical friend?</h1>
+
+                <p>I've been trying to think of a different take on the good ol' house analogy but there really isn't a better one.</p>
+
+                <p>So, you've just built your first house. There's nothing in it yet but you can think of it in its current state as HTML. HTML defines the structure of a webpage but by itself, it's little more than a skeleton.</p>
+
+                <p>You don't want your house looking bare do you so next you'd add some CSS. CSS is the style of your house which you add on top of the HTML. You could ask any number of people to decorate your house and they'd come up with 1000 different variations but the underlying structure of your house would stay the same.</p>
+
+                <p>So, you're in your house but the view is obscured by a large corporate skyscraper. Ugly but it'd serve as a good enough analogy for the DOM or Document Object Model. When your browser renders a page, it views each element in a certain order. Like that skyscraper, sitting inside of it is a CEO. Below him are his senior executives, followed by managers and so on.</p>
+
+                <p>You can alter the DOM much like a company can restructure itself or create entirely new divisions that never existed before. You can also assign values to a tag, much like assigning a team project to a department and from the manager down, the attributes of the section from the manager down will change.</p>
+
+                <p>That doesn't stop you from assigning individual elements their own values but due to the top down nature of the DOM, those changes will never reflect upwards.</p>
+                
+                <h1>What is meant by boxifying design?</h1>
+                
+                <p>The boxification of design is, as they say, pretty much what it says on the tin. If you were to take a web page, you should be able to break it down into multiple blocks. I say should but you can since all webpages at their core are made out of squares!</p>
+
+                <p>For aspiring web designs out there, there's a few ways you can boxify an existing design. Some like to use image editors while others prefer to simply print out a site and hand draw their boxes and notes on the page itself. It's all up to personal preference.</p>
+                
+                <h1>What is the box model?</h1>
+                
+                <p>So, you remember how each element on a page is really a box? Those boxes have a few hidden attributes attached to them which are a result of the box model. At the centre of a box is the content itself. This could come in the form of an image, text or even a link.</p>
+                
+                <p>So, you remember how each element on a page is really a box? Those boxes have a few hidden attributes attached to them which are a result of the box model. At the centre of a box is the content itself. This could come in the form of an image, text or even a link.</p>
+            <article>
+        </section>
+    </div>
+    
+    <footer>
+      <p>
+        <a href="mailto:marcus@thingsima.de" target="_blank">
+          <i class="fa fa-envelope"></i>
+        </a>
+        <a href="http://github.com/marcus-crane" target="_blank">
+          <i class="fa fa-github"></i>
+        </a>
+        <a href="http://steamcommunity.com/id/sandtree" target="_blank">
+          <i class="fa fa-steam"></i>
+        </a>
+        <a href="http://twitter.com/ethernetsalad" target="_blank">
+          <i class="fa fa-twitter"></i>
+        </a>
+      </p>
+    </footer>
+
+</body>
+</html>

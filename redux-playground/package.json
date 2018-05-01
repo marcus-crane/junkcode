@@ -1,0 +1,34 @@
+{
+  "name": "0098_redux_tutorial",
+  "version": "0.0.1",
+  "description": "Going through Dan Abramov's Redux Tutorial",
+  "main": "app.js",
+  "scripts": {
+    "start": "budo . -d --serve bundle.js --live",
+    "build": "browserify . -o bundle.js -g uglifyify"
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
+  "keywords": [],
+  "author": "Marcus <marcus@thingsima.de> (http://thingsima.de)",
+  "license": "TIM",
+  "dependencies": {
+    "deep-freeze": "0.0.1",
+    "expect": "^1.20.2",
+    "redux": "^3.5.2"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.0",
+    "budo": "^9.0.0",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1",
+    "uglifyify": "^3.0.2",
+    "watchify": "^3.7.0"
+  }
+}

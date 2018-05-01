@@ -1,0 +1,14 @@
+{
+  "name": "turtle-simulator",
+  "version": "1.0.0",
+  "description": "I was bored so I'm gonna simulate turtles or something",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marcus <marcus@thingsima.de>",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^1.2.3"
+  }
+}

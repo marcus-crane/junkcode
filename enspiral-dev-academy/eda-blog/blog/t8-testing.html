@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="../styles/main.css" type="text/css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" type="text/css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="../index.html"><i class="fa fa-chevron-left"></i></a>
+        <div id="title">
+            <h1>Javascript Scope</h1>
+            <h2>What you(r program can) see is what you get</h2>
+            <h3>May 25, 2016</h3>
+        </div>
+    </header>
+    
+    <div id="wrapper">
+        <section>
+            <article>
+                <h1>What is scope?</h1>
+
+                <p>When you have a value or expression, scope refers to the context in which said values and expressions are visible.</p>
+
+                <p>Let's say I have the following piece of code:</p>
+                <pre><code>function returnDog() {
+    var animal = "dog";
+    return animal;
+}</code></pre>
+            <p>The <code>animal</code> variable is defined inside the <code>returnDog()</code> function. When run, <code>returnDog()</code> will return the value of <code>animal</code> which in this case is <code>"dog"</code></p>
+
+            <p>Now what if I tried to change the value of <code>animal</code> to say, <code>"cat"</code>. You would think <code>returnDog()</code> would turn into some sort of <code>returnCat()</code> instead, right?</p>
+            <pre><code>function returnDog() {
+    var animal = "dog";
+    return animal;
+}
+
+animal = "cat";
+
+returnDog() // value is still "dog"
+</code></pre>
+            <p>But how is that?! We changed the animal variable to <code>"cat"</code> right before we called the function!</p>
+
+            <p>That's where scope comes in. The animal variable contained within <code>returnDog()</code> is only visible to the other parts of the code within the function.</p>
+
+            <p>What ends up happening is that we've defined two lots of <code>animal</code> variables. One is within the function which contains the value of <code>"dog"</code> and the other sits outside of the function with the value of <code>"cat"</code>.</p>
+
+            <p>Since functions only exist as they're being called, the animal variable within <code>returnDog()</code> is able to exist seperately from any other potential variables. It's possible to have hundreds of <code>animal</code>variables within hundreds of functions (although why would you) since they'd never interact with one another.</p>
+
+            <p>While you can't alter variables declared within functions from the outside, you can do the reverse.</p>
+
+            <pre><code>i = 0;
+function count() {
+    j = " is a number";
+    return i + j;
+}</code></pre>
+
+            <p>This code would return <code>"0 is a number"</code>.</p>
+
+            <p>From within <code>count()</code>, I could set <code>i</code> equal to <code>"hotdogs"</code> and we could get <code>"hotdogs is a number"</code> as a result.</p>
+
+            <p>We could then set <code>j</code> to equal <code>" are a food"</code> so that our code makes a bit more sense</p>
+
+            <p>Due to Javascript scope however, while <code>j</code> would still be equal to <code>" are a food"</code>, once we run <code>count()</code>, the output would be the same as we are left with two different <code>j</code> variables: once outside the function and one within it.</p>
+
+            <p>The same applies to functions within functions and so on. Scope works from the present level upwards.</p>
+
+            <p>Hopefully that all made sense!</p>
+            <article>
+        </section>
+    </div>
+    
+    <footer>
+      <p>
+        <a href="mailto:marcus@thingsima.de" target="_blank">
+          <i class="fa fa-envelope"></i>
+        </a>
+        <a href="http://github.com/marcus-crane" target="_blank">
+          <i class="fa fa-github"></i>
+        </a>
+        <a href="http://steamcommunity.com/id/sandtree" target="_blank">
+          <i class="fa fa-steam"></i>
+        </a>
+        <a href="http://twitter.com/ethernetsalad" target="_blank">
+          <i class="fa fa-twitter"></i>
+        </a>
+      </p>
+    </footer>
+
+</body>
+</html>
+

@@ -1,0 +1,15 @@
+{
+  "name": "MangaMulcher",
+  "version": "1.0.0",
+  "description": "Gotta eat all the manga",
+  "main": "app.js",
+  "author": "Marcus <marcus@thingsima.de>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.15.2",
+    "x-ray": "^2.3.1"
+  },
+  "devDependencies": {
+    "blue-tape": "^1.0.0"
+  }
+}

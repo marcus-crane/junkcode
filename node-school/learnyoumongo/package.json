@@ -1,0 +1,11 @@
+{
+  "name": "learnyoumongo",
+  "version": "0.0.1",
+  "description": "Learn You Mongo exercises",
+  "main": "app.js",
+  "scripts": {
+    "test": "hi"
+  },
+  "author": "Marcus <marcus@thingsima.de> (http://thingsima.de)",
+  "license": "MIT"
+}

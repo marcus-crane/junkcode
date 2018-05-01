@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="../styles/main.css" type="text/css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" type="text/css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a href="../index.html"><i class="fa fa-chevron-left"></i></a>
+        <div id="title">
+            <h1>Javascript Language</h1>
+            <h2>Y'know, the language of Javascript!</h2>
+            <h3>May 14th, 2016</h3>
+        </div>
+    </header>
+    
+    <div id="wrapper">
+        <section>
+            <article>
+                <h1>Can you describe the use cases of the following in Javascript?</h1>
+
+                <p>Sure! Just let me know if I miss any out. I'm still learning after all.</p>
+
+                <h1>Parentheses <code>()</code></h1>
+                
+                <p>They can be used to group expressions: <code>b = (1 + 2) * 3</code>.</p>
+                <p>They can be used to contain expressions: <code> if (b > 5)</code> or <code>while (b < 5)</code>.</p>
+                <p>They can also be used to contain parameters for a function: <code>function(parameter)</code> or just <code>function()</code> by itself.</p>
+                
+                <h1>Brackets <code>[]</code></h1>
+                
+                <p>Brackets are used to initialise and access arrays. They're also used in one of the two ways you can access objects.</p>
+                <p>If you had an array like <code>Array = [1, "Fruit", true]</code>, you would access it using brackets.</p>
+                <p><code>Array[0] = 1</code>, <code>Array[1] = "Fruit"</code>, <code>Array[2] = true</code></p>
+                <p>The brackets themselves store the array position that you want to access. Remember that array positions start at 0 instead of 1!</p>
+                <p>If you have an object you're trying to access, brackets are used in bracket notation.</p>
+                <p>It's as simple as listing the object name and then the key you want to access in brackets: <code>obj["objectKey"]</code></p>
+                <p>It might seem easier to use dot notation <code>obj.objectKey</code> but bracket notation is super handy if you want to use a variable as the object's key name.</p>
+
+                <h1>Braces <code>{}</code></h1>
+
+                <p>No, not like braces for your teeth!</p>
+                <p>Braces in Javascript are used for defining where a function starts and ends. Simple as that.</p>
+                <p><pre><code>if (1 < 2) {
+    console.log("2 is bigger than 1");
+}</code></pre></p>
+
+                <h1>Single Quotes <code>' '</code> and Double Quotes <code>" "</code></h1>
+
+                <p>I've put these together because as simple as it seems, this one can get a bit tricky.</p>
+                <p>For the most part, single and double quotes can be used interchangably</p>
+                <p><code>var string = "Words";</code> is just as valid as <code>var string = 'Words';</code></p>
+                <p>You can also be used to do quotes within a string literal as such:</p>
+                <p><pre><code>var string = 
+"She said 'It's a quote within a quote'"</code></pre></p>
+                <p>and inversely</p>
+                <p><pre><code>var string =
+'She said "It's a quote within a quote"'</code></pre></p>
+                <p>Really, it's personal preference but if you tend to use apostrophes a lot in your strings, double quote are your friend.</p>
+                <p>Be careful though because if you're doing JSON at all, you MUST use double quotes!</p>
+            <article>
+        </section>
+    </div>
+    
+    <footer>
+      <p>
+        <a href="mailto:marcus@thingsima.de" target="_blank">
+          <i class="fa fa-envelope"></i>
+        </a>
+        <a href="http://github.com/marcus-crane" target="_blank">
+          <i class="fa fa-github"></i>
+        </a>
+        <a href="http://steamcommunity.com/id/sandtree" target="_blank">
+          <i class="fa fa-steam"></i>
+        </a>
+        <a href="http://twitter.com/ethernetsalad" target="_blank">
+          <i class="fa fa-twitter"></i>
+        </a>
+      </p>
+    </footer>
+
+</body>
+</html>
+

@@ -1,0 +1,17 @@
+{
+  "name": "expressworks",
+  "version": "0.0.1",
+  "description": "",
+  "main": "01_hello_world.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Marcus <marcus@thingsima.de> (http://thingsima.de)",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "stylus": "^0.54.5"
+  }
+}

@@ -1,0 +1,17 @@
+﻿@model IEnumerable<MoviesDB.Core.Studio>
+
+@{
+    ViewBag.Title = "All Studios";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<ul>
+    @foreach(var studio in Model)
+    {
+        // @studio.Name is the text to display, "detail" is the action, "studio" is the controller and the 
+        // studio.Id anonymous object is passed into the detail action so it knows which entry to fetch
+        // null exists in place of a specific HTML attributes parameter since we don't need one
+        <li>@Html.ActionLink(@studio.Name, "detail", "studio", new { studio.Id }, null)</li>
+    }
+</ul>

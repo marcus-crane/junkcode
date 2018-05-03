@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Destiny 2</string>
+    <string name="title">Destiny 2</string>
+    <string name="releasedate">September 6, 2017</string>
+    <string name="developer">Developed by Bungie</string>
+    <string name="publisher">Published by Activision</string>
+    <string name="description">Scattered and powerless, the Guardians must acquire new powers to face Ghaul and the Red Legion, and venture to new worlds in the Destiny universe.</string>
+    <string name="platforms">Releasing for PC, PS4 and Xbox One</string>
+</resources>

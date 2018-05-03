@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="de.thingsima.happybirthday.MainActivity">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_height="200dp"
+        android:layout_width="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/destiny2" />
+
+    <TextView
+        android:id="@+id/title"
+        android:textSize="22sp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/title" />
+
+    <TextView
+        android:id="@+id/releasedate"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/title"
+        android:text="@string/releasedate" />
+
+    <TextView
+        android:id="@+id/developer"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/releasedate"
+        android:text="@string/developer" />
+
+    <TextView
+        android:id="@+id/publisher"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/developer"
+        android:text="@string/publisher" />
+
+    <TextView
+        android:id="@+id/description"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="60dp"
+        android:layout_below="@id/publisher"
+        android:text="@string/description" />
+
+    <TextView
+        android:id="@+id/platforms"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:layout_below="@id/description"
+        android:text="@string/platforms" />
+</RelativeLayout>

@@ -1,0 +1,11 @@
+Z:\Code\CSharp\aspnet-mvc-practice\Movies\Movies.Core\obj\Debug\Movies.Core.csprojResolveAssemblyReference.cache
+Z:\Code\CSharp\aspnet-mvc-practice\Movies\Movies.Core\bin\Debug\Movies.Core.dll
+Z:\Code\CSharp\aspnet-mvc-practice\Movies\Movies.Core\bin\Debug\Movies.Core.pdb
+Z:\Code\CSharp\aspnet-mvc-practice\Movies\Movies.Core\obj\Debug\Movies.Core.dll
+Z:\Code\CSharp\aspnet-mvc-practice\Movies\Movies.Core\obj\Debug\Movies.Core.pdb
+C:\Users\Sentry\Documents\Movies\Movies.Core\bin\Debug\Movies.Core.dll.config
+C:\Users\Sentry\Documents\Movies\Movies.Core\bin\Debug\Movies.Core.dll
+C:\Users\Sentry\Documents\Movies\Movies.Core\bin\Debug\Movies.Core.pdb
+C:\Users\Sentry\Documents\Movies\Movies.Core\obj\Debug\Movies.Core.csprojResolveAssemblyReference.cache
+C:\Users\Sentry\Documents\Movies\Movies.Core\obj\Debug\Movies.Core.dll
+C:\Users\Sentry\Documents\Movies\Movies.Core\obj\Debug\Movies.Core.pdb

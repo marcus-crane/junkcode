@@ -1,0 +1,27 @@
+﻿@model MoviesDB.Core.Studio
+
+@{
+    ViewBag.Title = "Detail";
+}
+
+<h2>@Model.Name</h2>
+
+@Html.ActionLink("Add a movie", "Create", "Movie", new { StudioId = @Model.Id }, null)
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Release Date</th>
+    </tr>
+    @foreach(var movie in Model.Movies)
+    {
+        <tr>
+            <td>@movie.Name</td>
+            <td>@movie.ReleaseDate</td>
+            <td>
+
+            </td>
+        </tr>
+    }
+    </tr>
+</table>

@@ -1,4 +1,5 @@
 from urllib import parse
+
 import requests
 
 def encode(querystring):
